@@ -1,3 +1,4 @@
+@"
 name: CI
 
 on:
@@ -23,7 +24,12 @@ jobs:
           pip install -r requirements.txt
 
       - name: Generate offline snapshot
-        run: python -m src.snapshot_airtable --offline
+        run: |
+          export PYTHONPATH="${{ github.workspace }}:$PYTHONPATH"
+          python -m src.snapshot_airtable --offline
 
       - name: Run unit tests
-        run: pytest tests -q
+        run: |
+          export PYTHONPATH="${{ github.workspace }}:$PYTHONPATH"
+          pytest tests -q
+"@ | Out-File -FilePath .github/workflows/ci.yml -Encoding utf8
