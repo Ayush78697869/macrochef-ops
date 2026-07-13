@@ -1,0 +1,10 @@
+{"question": "What is the recommended daily limit for added sugars?", "expected_source": "dga_2020-2025.pdf", "expected_pages": [41, 42, 43]}
+{"question": "How much sodium should adults consume per day at most?", "expected_source": "dga_2020-2025.pdf", "expected_pages": [46, 47, 48]}
+{"question": "What are the recommendations for alcohol consumption?", "expected_source": "dga_2020-2025.pdf", "expected_pages": [49, 50]}
+{"question": "How much protein should an adult eat per day?", "expected_source": "dga_2020-2025.pdf", "expected_pages": [33, 46, 128]}
+{"question": "What foods are part of a healthy dietary pattern?", "expected_source": "dga_2020-2025.pdf", "expected_pages": [32, 33, 34]}
+{"question": "What is the limit for saturated fat intake?", "expected_source": "dga_2020-2025.pdf", "expected_pages": [44, 45]}
+{"question": "How much fiber should adults consume daily?", "expected_source": "dga_2020-2025.pdf", "expected_pages": [36, 101]}
+{"question": "What are the guidelines for dairy consumption?", "expected_source": "dga_2020-2025.pdf", "expected_pages": [33, 46]}
+{"question": "How should physical activity relate to diet?", "expected_source": "dga_2020-2025.pdf", "expected_pages": [36, 139]}
+{"question": "What is the advice on ultra-processed foods?", "expected_source": "dga_2020-2025.pdf", "expected_pages": [32, 33, 41]}

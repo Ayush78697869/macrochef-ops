@@ -62,3 +62,21 @@ python -m src.agent --verbose
 
 # 4. Or run Streamlit UI
 streamlit run src/app.py
+```
+
+---
+
+## Design decisions
+
+- **From-scratch tool-calling loop (~40 lines) instead of LangChain** — every failure mode is visible; malformed tool calls are fed back as error results so the model retries, with a step cap so it can't loop forever.
+- **The LLM never does arithmetic** — meal IDs go to deterministic validators that recompute macros from SQLite and screen allergens in code.
+- **Allergen screening uses keyword expansion** ("dairy" → paneer, cheddar, yogurt, cream...) — a gap found via testing (naive substring matching missed derived ingredients), locked in with a unit test.
+- **Snapshot ETL instead of live Airtable queries** — reproducible runs and evals, no rate limits in the hot path, and the deployed demo ships data instead of credentials.
+
+## Limitations & next steps
+
+Single-day plans only; keyword allergen screening is not medical-grade; synthetic macros are plausible but not lab-verified; retrieval eval set is small (10 questions) and being expanded. Next: multi-day planning as constrained optimization, hybrid retrieval + reranker, personalization from order history, response streaming.
+
+## Data & licenses
+
+All operational data is synthetic (Faker-generated clients and orders, generated meal catalog). No production data of any company is used. The *Dietary Guidelines for Americans 2020–2025* is US-government public domain. Code: MIT.
