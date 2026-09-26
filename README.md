@@ -1,6 +1,6 @@
 # 🥗 MacroChef Ops
 
-Agentic meal planner for a fictional meal-delivery company. Reads client profiles, dietary restrictions, and macro targets from a synthetic operational database, then builds personalized one-day meal plans with deterministic allergen screening and macro validation. All nutrition-science claims are grounded via RAG over the official *Dietary Guidelines for Americans* with page-level citations.
+Agentic meal planner for a meal-delivery company. Reads client profiles, dietary restrictions, and macro targets from a synthetic operational database, then builds personalized one-day meal plans with deterministic allergen screening and macro validation. All nutrition-science claims are grounded via RAG over the official *Dietary Guidelines for Americans* with page-level citations.
 
 **Built for:** LLM/AI Engineering portfolio — demonstrates from-scratch tool calling, RAG, deterministic validators, and eval-driven development.
 
